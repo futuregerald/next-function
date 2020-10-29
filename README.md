@@ -63,7 +63,7 @@ Now Netlify will build and deploy your site whenever you push to git.
 
 ## Background Function
 
-This boilerplate has a background function written in go that is triggered on user signup. The function downloads their gravatar and resizes it to 3 different sizes and saves it in a github repo. Note that the repo name is hard-coded to this one and needs to be changed. In addition, you need to specify the following environment variables on your Netlify site:
+This boilerplate has a background function written in go that is triggered on user signup. The function downloads their gravatar and resizes it to 3 different sizes and saves it in a github repo in a directory called `profile_pictures` in a subdirectory under the user's unique ID. Note that the repo name is hard-coded to this one and needs to be changed. In addition, you need to specify the following environment variables on your Netlify site:
 
 - `GITHUB_COMMITTER_EMAIL`
 - `GITHUB_COMMITTER_NAME`
@@ -72,3 +72,7 @@ This boilerplate has a background function written in go that is triggered on us
 - `GITHUB_TOKEN`
 
 In addition, the netlify.toml has an environment variable called `GO_IMPORT_PATH` that is not specific to this function, but to deploying Go functions in general. The value needs to be set to your github repo; for example `github.com/netlify/next-function` . You can read more about deploying Go functions on Netlify in the [Netlify docs](https://docs.netlify.com/functions/build-with-go/).
+
+## Example
+
+This site is currently deployed at [https://background-next.netlify.app/](https://background-next.netlify.app/). Signup then check back here for your avatar!
