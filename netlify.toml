@@ -1,0 +1,13 @@
+[build]
+  command = "npm run build && npm run build:function"
+  publish = "out"
+  functions = "functions/"
+
+[[plugins]]
+package = "@netlify/plugin-sitemap"
+
+  [plugins.inputs]
+  buildDir = "out"
+[build.environment]
+  GO_IMPORT_PATH="github.com/netlify/next-function"
+  GO_VERSION="1.15"

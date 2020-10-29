@@ -1,0 +1,16 @@
+{
+  "name": "next-starter-jamstack",
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build && next export",
+    "start": "next dev",
+    "build:function": "mkdir -p functions && go get ./func_source/... && go build -o functions/identity-signup-background ./func_source/save.go"
+  },
+  "dependencies": {
+    "netlify-identity-widget": "^1.9.1",
+    "next": "9.5.5",
+    "react": "16.14.0",
+    "react-dom": "16.14.0"
+  }
+}
